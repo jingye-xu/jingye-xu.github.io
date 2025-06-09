@@ -1,0 +1,3 @@
+I'm a PhD student at UTSA, focusing on Computer Science and Software Engineering. My research interests include software testing, program analysis, and automated debugging.
+
+I enjoy solving complex technical problems and developing innovative solutions. My work combines theoretical computer science with practical software engineering to create more reliable and efficient systems. 

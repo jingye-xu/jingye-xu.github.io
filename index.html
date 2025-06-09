@@ -87,6 +87,78 @@
 
     </aside>
 
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+
+
+      <!--
+        - #NAVBAR
+      -->
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Projects</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contributions</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Blogs</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <div id="about-text-container">
+            <!-- Content will be loaded from aboutme.txt -->
+          </div>
+        </section>
+
+        <script>
+          // Load about me text from file
+          fetch('assets/contents/aboutme.txt')
+            .then(response => response.text())
+            .then(text => {
+              const container = document.getElementById('about-text-container');
+              // Split text by double newlines and create paragraphs
+              const paragraphs = text.split('\n\n');
+              paragraphs.forEach(paragraph => {
+                if (paragraph.trim()) {
+                  const p = document.createElement('p');
+                  p.textContent = paragraph.trim();
+                  container.appendChild(p);
+                }
+              });
+            })
+            .catch(error => console.error('Error loading about me text:', error));
+        </script>
+    </div>
   </main>
 
 
