@@ -1,3 +1,2 @@
-I'm a PhD student at UTSA, focusing on Computer Science and Software Engineering. My research interests include software testing, program analysis, and automated debugging.
+I am a PhD candidate in Computer Science specializing in machine learning, with hands-on experience building and deploying end-to-end ML systems. Skilled in large-scale model development, data processing, and real-time inference using Python, PyTorch, and TensorFlow. Led projects spanning autonomous systems, sensor-driven prediction models, and production-ready ML pipelines. Seeking to apply advanced AI expertise to develop impactful, scalable intelligent solutions across diverse application domains.
 
-I enjoy solving complex technical problems and developing innovative solutions. My work combines theoretical computer science with practical software engineering to create more reliable and efficient systems. 

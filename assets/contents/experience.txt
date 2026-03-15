@@ -1,0 +1,13 @@
+The University of Texas at San Antonio
+Graduate Teaching & Research Assistant
+Sep 2021 - Present
+• Assisted in designing an autonomous driving course with hands-on labs using camera and LiDAR technology, which increased student project completion rates by enabling practical experience with real-world tools.
+• Served as TA for core CS courses (Compiler, Computer Architecture, Programming Languages, Embedded Systems), grading assignments, leading labs, and providing office hours, which helped raise average student scores and satisfaction.
+• Led research on AI-driven healthcare solutions for autism and patient-specific needs, developing predictive models with TensorFlow, PyTorch, and IoT techniques, resulting in 10+ conference papers on autism monitoring, autonomous wheelchair design, HR/HRV prediction, and in-home activity sensing.
+
+New H3C Technologies Co., Ltd
+Assistant Test Engineer
+Aug 2018 - Aug 2019
+• Honored as Test Center Outstanding Student for consistently exceeding testing quality standards and contributing innovative test solutions.
+• Executed functional and stress tests on computer storage hardware using Python-based test scripts and oscilloscopes, identifying multiple stability issues and improving device reliability.
+• Developed Python and Bash automation scripts that integrated with the test framework, reducing manual setup time and shortening overall test cycles.

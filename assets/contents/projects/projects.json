@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Home Activity Monitoring",
+    "category": "researches",
+    "categoryLabel": "Researches",
+    "image": "./assets/images/project-1.jpg",
+    "alt": "Home Activity Monitoring",
+    "url": "#",
+    "article": "assets/contents/projects/articles/home-activity-monitoring.html"
+  },
+  {
+    "title": "Vital Sign Monitoring",
+    "category": "researches",
+    "categoryLabel": "Researches",
+    "image": "./assets/images/project-2.png",
+    "alt": "Vital Sign Monitoring",
+    "url": "#",
+    "article": "assets/contents/projects/articles/vital-sign-monitoring.html"
+  },
+  {
+    "title": "Autonomous Driving System",
+    "category": "researches",
+    "categoryLabel": "Researches",
+    "image": "./assets/images/project-3.jpg",
+    "alt": "Autonomous Driving System",
+    "url": "#",
+    "article": "assets/contents/projects/articles/autonomous-driving-system.html"
+  }
+]

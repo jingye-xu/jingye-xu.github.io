@@ -42,13 +42,13 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Jingye Xu" width="80">
+          <img src="./assets/images/my-avatar.jpeg" alt="Jingye Xu" width="80">
         </figure>
 
         <div class="info-content">
           <h1 class="name" title="Jingye Xu">Jingye Xu</h1>
 
-          <p class="title">PhD Student at UTSA</p>
+          <p class="title">PhD Candidate at UTSA</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -74,7 +74,21 @@
             <div class="contact-info">
               <p class="contact-title">Email</p>
 
-              <p class="contact-link">jingye.xu[at]utsa.edu</p>
+              <p class="contact-link">jingye.xu[at]outlook.com</p>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Cypress, TX, USA</address>
             </div>
 
           </li>
@@ -107,21 +121,16 @@
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Projects</button>
+            <button class="navbar-link" data-nav-link>Portfolio</button>
           </li>
 
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contributions</button>
-          </li>
-
-          <li class="navbar-item">
+          <!-- <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Blogs</button>
-          </li>
+          </li> -->
 
         </ul>
 
       </nav>
-
 
 
       <!--
@@ -138,9 +147,8 @@
           <div id="about-text-container">
             <!-- Content will be loaded from aboutme.txt -->
           </div>
-        </section>
 
-        <script>
+          <script>
           // Load about me text from file
           fetch('assets/contents/aboutme.txt')
             .then(response => response.text())
@@ -157,11 +165,184 @@
               });
             })
             .catch(error => console.error('Error loading about me text:', error));
-        </script>
+          </script>
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list" id="education-timeline">
+            <!-- Education items will be loaded here -->
+          </ol>
+
+          <script>
+            // Load education timeline from file
+            fetch('assets/contents/education.txt')
+              .then(response => response.text())
+              .then(text => {
+                const timeline = document.getElementById('education-timeline');
+                // Each entry is separated by double newlines
+                const entries = text.split('\n\n');
+                entries.forEach(entry => {
+                  const lines = entry.trim().split('\n');
+                    if (lines.length >= 4) {
+                    const [school, major, time, ...descArr] = lines;
+                    const desc = descArr.map(line => `&nbsp;&nbsp;${line.trim()}`).join('<br>');
+                    const li = document.createElement('li');
+                    li.className = 'timeline-item';
+                    li.innerHTML = `
+                      <h4 class="h4 timeline-item-title">${school}</h4>
+                      <span class="timeline-major">${major}</span>
+                      <span class="timeline-time">${time}</span>
+                      <p class="timeline-text">${desc}</p>
+                    `;
+                    timeline.appendChild(li);
+                    }
+                });
+              })
+              .catch(error => console.error('Error loading education timeline:', error));
+          </script>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list" id="experience-timeline">
+            <!-- Experience items will be loaded here -->
+          </ol>
+
+          <script>
+            // Load experience timeline from file
+            fetch('assets/contents/experience.txt')
+              .then(response => response.text())
+              .then(text => {
+                const timeline = document.getElementById('experience-timeline');
+                // Each entry is separated by double newlines
+                const entries = text.split('\n\n');
+                entries.forEach(entry => {
+                  const lines = entry.trim().split('\n');
+                    if (lines.length >= 4) {
+                    const [company, position, time, ...descArr] = lines;
+                    const desc = descArr.map(line => `&nbsp;&nbsp;${line.trim()}`).join('<br>');
+                    const li = document.createElement('li');
+                    li.className = 'timeline-item';
+                    li.innerHTML = `
+                      <h4 class="h4 timeline-item-title">${company}</h4>
+                      <span class="timeline-major">${position}</span>
+                      <span class="timeline-time">${time}</span>
+                      <p class="timeline-text">${desc}</p>
+                    `;
+                    timeline.appendChild(li);
+                    }
+                });
+              })
+              .catch(error => console.error('Error loading experience timeline:', error));
+          </script>
+
+        </section>
+      </article>
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Researches</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Applications</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Researches</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list" id="project-list">
+            <!-- Portfolio items are loaded from assets/contents/projects/projects.json -->
+          </ul>
+
+        </section>
+      </article>
+
+
     </div>
   </main>
 
+  <div class="modal-container" data-modal-container>
 
+    <div class="overlay" data-overlay></div>
+
+    <section class="testimonials-modal">
+
+      <button class="modal-close-btn" data-modal-close-btn>
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <div class="modal-content">
+        <h4 class="h3 modal-title" data-modal-title>Project Article</h4>
+        <div data-project-article></div>
+      </div>
+
+    </section>
+
+  </div>
 
 
 
