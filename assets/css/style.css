@@ -721,6 +721,35 @@ main {
   line-height: 1.6;
 }
 
+[data-project-article] {
+  color: var(--light-gray);
+}
+
+[data-project-article] h1,
+[data-project-article] h2,
+[data-project-article] h3,
+[data-project-article] h4 {
+  color: var(--white-2);
+  margin: 12px 0 8px;
+}
+
+[data-project-article] p,
+[data-project-article] li {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.7;
+}
+
+[data-project-article] ul,
+[data-project-article] ol {
+  margin: 8px 0 12px 18px;
+}
+
+[data-project-article] article {
+  display: block;
+}
+
 
 /**
  * #clients 

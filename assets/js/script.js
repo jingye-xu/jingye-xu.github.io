@@ -174,6 +174,10 @@ const modalText = document.querySelector("[data-modal-text]");
 
 // modal toggle function
 const testimonialsModalFunc = function () {
+  if (!modalContainer || !overlay) {
+    return;
+  }
+
   modalContainer.classList.toggle("active");
   overlay.classList.toggle("active");
 }
@@ -195,7 +199,7 @@ for (let i = 0; i < testimonialsItem.length; i++) {
 }
 
 // add click event to modal close button
-if (modalCloseBtn && overlay && modalContainer) {
+if (modalCloseBtn && overlay && modalContainer && modalImg && modalTitle && modalText && testimonialsItem.length > 0) {
   modalCloseBtn.addEventListener("click", testimonialsModalFunc);
   overlay.addEventListener("click", testimonialsModalFunc);
 }
