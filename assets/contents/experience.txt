@@ -1,9 +1,23 @@
 The University of Texas at San Antonio
 Graduate Teaching & Research Assistant
 Sep 2021 - Present
-• Assisted in designing an autonomous driving course with hands-on labs using camera and LiDAR technology, which increased student project completion rates by enabling practical experience with real-world tools.
-• Served as TA for core CS courses (Compiler, Computer Architecture, Programming Languages, Embedded Systems), grading assignments, leading labs, and providing office hours, which helped raise average student scores and satisfaction.
-• Led research on AI-driven healthcare solutions for autism and patient-specific needs, developing predictive models with TensorFlow, PyTorch, and IoT techniques, resulting in 10+ conference papers on autism monitoring, autonomous wheelchair design, HR/HRV prediction, and in-home activity sensing.
+• Instructor for CS 2713 Computer Programming in C in Spring 2026.
+• Served as TA for Deep Learning, Programming Languages and Compilers, Embedded Systems, Programming Languages - LISP, Computer Programming II - C, and Introduction to Computer Programming I - Python.
+• Designed autonomous driving course modules and project materials, including starter code and technical report guidelines, and mentored 20+ students implementing camera- and LiDAR-based autonomous driving functionality.
+• Led research on connected health, sensor-driven prediction, and embedded AI systems, contributing to 10+ peer-reviewed papers on activity monitoring, HR/HRV prediction, IoT runtime optimization, and assistive wheelchair autonomy.
+
+F1TENTH Grand Prix at CPS-IoT Week
+Undergraduate Research Mentor
+Jun 2022 - May 2023
+• Mentored two undergraduate students in building an autonomous racing car from scratch.
+• Implemented a LiDAR-based autonomous driving algorithm on the Robot Operating System (ROS) framework using Python.
+• Achieved 5th place out of 13 teams at the 2023 12th F1TENTH Grand Prix.
+
+ICCAD ACM/IEEE TinyML Design Contest
+Graduate Student Mentor
+2022
+• Mentored three graduate students optimizing and deploying a machine learning model for life-threatening ventricular arrhythmia detection on a resource-constrained MCU.
+• Ranked 20th out of 150 teams.
 
 New H3C Technologies Co., Ltd
 Assistant Test Engineer

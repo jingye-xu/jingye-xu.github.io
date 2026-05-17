@@ -1,0 +1,10 @@
+Jingye Xu, Xiaomeng Wang, Jia Liu, et al. SAFE: Sensor-Aware Fusion Engine for Fault-resilient In-home Health Activity Monitoring. CHASE 2026. Accepted.
+Jia Liu, Xiaomeng Wang, Bianca Shieu, Deanna Dolores Garcia, Amy Vondenberger, Jingye Xu, et al. Integrating Stakeholder Insights to Inform the Design of AURA. JMIR Formative Research, 2026. Accepted.
+Wei Wei, Jingye Xu, Sahidul Islam, et al. AERO: Adaptive and Efficient Runtime-Aware OTA Updates for Energy-Harvesting IoT. DATE 2026.
+Jingye Xu, Yuntong Zhang, Wei Wang, et al. Touchless Restroom Monitoring: A Privacy-Preserving System for Patient Care. HumanSys 2025.
+Jingye Xu, Yuntong Zhang, Wei Wang, et al. A Comprehensive PPG-based Dataset for HR/HRV Studies. ICHI 2025.
+Jingye Xu, Yuntong Zhang, Mimi Xie, et al. Real-time Intelligent On-device Monitoring of Heart Rate Variability with PPG Sensors. Journal of Systems Architecture, 2024.
+Mahathir Monjur, Jia Liu, Jingye Xu, et al. Data Distribution Dynamics in Real-world WiFi-based Patient Activity Monitoring for Home Healthcare. ICHI 2024.
+Zhiwei Wang, Jingye Xu, Jianqiu Zhang, et al. An Intelligent Assistive Driving Solution Based on Smartphone for Power Wheelchair Mobility. Journal of Systems Architecture, 2024.
+Yuntong Zhang, Jingye Xu, Mimi Xie, et al. Efficient and Direct Inference of Heart Rate Variability using Both Signal Processing and Machine Learning. CHASE 2023.
+Gabriel A. Morales, Jingye Xu, Dakai Zhu, et al. Lightweight Collaborative Inferencing for Real-time Intrusion Detection in IoT Networks. UIC 2022.

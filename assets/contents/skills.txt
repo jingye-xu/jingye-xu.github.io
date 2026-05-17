@@ -1,0 +1,6 @@
+Programming Languages: Python, MATLAB, C/C++, SQL, LaTeX
+Machine Learning & AI: PyTorch, TensorFlow, TensorFlow Lite, CoreML, Computer Vision, Autonomous Driving, Statistical Modeling, Data Mining, Big Data Techniques
+IoT & Embedded Systems: Mosquitto, Bluetooth, Arduino, ESP32, MSP430, STM32, Node-RED, TinyML, MQTT
+Data Science & Databases: MongoDB, Vector Databases, Neural Architecture Search, Samba
+Tools & Infrastructure: Git, Cron, Bash, Docker, Computer Networks, Virtual Machines, VPN
+Languages: English, Chinese

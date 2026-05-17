@@ -1,29 +1,146 @@
 [
   {
     "title": "Home Activity Monitoring",
-    "category": "researches",
-    "categoryLabel": "Researches",
-    "image": "./assets/images/project-1.jpg",
+    "category": "Research",
+    "tags": ["Research", "Health AI", "IoT", "Machine Learning"],
+    "image": "./assets/images/project-home-activity.svg",
     "alt": "Home Activity Monitoring",
     "url": "#",
     "article": "assets/contents/projects/articles/home-activity-monitoring.html"
   },
   {
     "title": "Vital Sign Monitoring",
-    "category": "researches",
-    "categoryLabel": "Researches",
-    "image": "./assets/images/project-2.png",
+    "category": "Research",
+    "tags": ["Research", "Health AI", "Embedded", "Machine Learning"],
+    "image": "./assets/images/project-vital-sign.svg",
     "alt": "Vital Sign Monitoring",
     "url": "#",
     "article": "assets/contents/projects/articles/vital-sign-monitoring.html"
   },
   {
     "title": "Autonomous Driving System",
-    "category": "researches",
-    "categoryLabel": "Researches",
-    "image": "./assets/images/project-3.jpg",
+    "category": "Research",
+    "tags": ["Research", "Autonomous Systems", "Embedded", "Machine Learning"],
+    "image": "./assets/images/project-autonomous-driving.svg",
     "alt": "Autonomous Driving System",
     "url": "#",
     "article": "assets/contents/projects/articles/autonomous-driving-system.html"
+  },
+  {
+    "title": "Personal Portfolio Website",
+    "category": "Portfolio",
+    "tags": ["Portfolio", "Web"],
+    "image": "./assets/images/project-portfolio-site.svg",
+    "alt": "Personal Portfolio Website",
+    "url": "https://github.com/jingye-xu/jingye-xu.github.io",
+    "article": "assets/contents/projects/articles/github-portfolio-site.html"
+  },
+  {
+    "title": "DistriLearn",
+    "category": "Research",
+    "tags": ["Research", "Machine Learning", "IoT", "Security"],
+    "image": "./assets/images/project-distributed-learning.svg",
+    "alt": "DistriLearn",
+    "url": "https://github.com/jingye-xu/DistriLearn",
+    "article": "assets/contents/projects/articles/github-distrilearn.html"
+  },
+  {
+    "title": "pi-display",
+    "category": "Tools",
+    "tags": ["Tools", "IoT", "Embedded", "Fork"],
+    "image": "./assets/images/project-raspberry-display.svg",
+    "alt": "pi-display",
+    "url": "https://github.com/jingye-xu/pi-display",
+    "article": "assets/contents/projects/articles/github-pi-display.html"
+  },
+  {
+    "title": "happyWifehappyLife",
+    "category": "Learning",
+    "tags": ["Learning", "C++"],
+    "image": "./assets/images/project-cpp.svg",
+    "alt": "happyWifehappyLife",
+    "url": "https://github.com/jingye-xu/happyWifehappyLife",
+    "article": "assets/contents/projects/articles/github-happy-wife-happy-life.html"
+  },
+  {
+    "title": "proxyServerForStableDiffusion",
+    "category": "Applications",
+    "tags": ["Applications", "Machine Learning", "Web", "Tools"],
+    "image": "./assets/images/project-ai-proxy.svg",
+    "alt": "proxyServerForStableDiffusion",
+    "url": "https://github.com/jingye-xu/proxyServerForStableDiffusion",
+    "article": "assets/contents/projects/articles/github-proxy-stable-diffusion.html"
+  },
+  {
+    "title": "HRV Monitor Demo - MSP430",
+    "category": "Research",
+    "tags": ["Research", "Health AI", "Embedded", "IoT"],
+    "image": "./assets/images/project-hrv-embedded.svg",
+    "alt": "HRV Monitor Demo MSP430",
+    "url": "https://github.com/jingye-xu/HRV_Monitor_System_Demo_MSP430",
+    "article": "assets/contents/projects/articles/github-hrv-msp430.html"
+  },
+  {
+    "title": "HRV Monitor Demo - Pi",
+    "category": "Research",
+    "tags": ["Research", "Health AI", "Embedded", "IoT"],
+    "image": "./assets/images/project-hrv-embedded.svg",
+    "alt": "HRV Monitor Demo Pi",
+    "url": "https://github.com/jingye-xu/HRV_Monitor_System_Demo_Pi",
+    "article": "assets/contents/projects/articles/github-hrv-pi.html"
+  },
+  {
+    "title": "Food Nutrition Database System",
+    "category": "Database",
+    "tags": ["Database", "Web", "Applications"],
+    "image": "./assets/images/project-food-database.svg",
+    "alt": "Food Nutrition Database System",
+    "url": "https://github.com/jingye-xu/FoodNutritionDatabaseSystem",
+    "article": "assets/contents/projects/articles/github-food-nutrition-database.html"
+  },
+  {
+    "title": "PPG + ACC Data Acquisition",
+    "category": "Research",
+    "tags": ["Research", "Health AI", "IoT", "Data"],
+    "image": "./assets/images/project-ppg-acquisition.svg",
+    "alt": "PPG and accelerometer data acquisition",
+    "url": "https://github.com/jingye-xu/PPG_Acc_Data_acquisition",
+    "article": "assets/contents/projects/articles/github-ppg-acc-data-acquisition.html"
+  },
+  {
+    "title": "TinyRunners C Code",
+    "category": "Embedded",
+    "tags": ["Embedded", "TinyML", "Health AI", "C"],
+    "image": "./assets/images/project-tinyml.svg",
+    "alt": "TinyRunners C Code",
+    "url": "https://github.com/jingye-xu/TinyRunners-C-code",
+    "article": "assets/contents/projects/articles/github-tinyrunners-c-code.html"
+  },
+  {
+    "title": "wheelchair",
+    "category": "Applications",
+    "tags": ["Applications", "Autonomous Systems", "Web", "Robotics"],
+    "image": "./assets/images/project-wheelchair-api.svg",
+    "alt": "wheelchair Web API",
+    "url": "https://github.com/jingye-xu/wheelchair",
+    "article": "assets/contents/projects/articles/github-wheelchair.html"
+  },
+  {
+    "title": "TinyRunners",
+    "category": "Research",
+    "tags": ["Research", "TinyML", "Health AI", "Machine Learning"],
+    "image": "./assets/images/project-tinyml.svg",
+    "alt": "TinyRunners",
+    "url": "https://github.com/jingye-xu/TinyRunners",
+    "article": "assets/contents/projects/articles/github-tinyrunners.html"
+  },
+  {
+    "title": "Minecraft Adder with Display",
+    "category": "Learning",
+    "tags": ["Learning", "Computer Architecture", "Hardware"],
+    "image": "./assets/images/project-minecraft-adder.svg",
+    "alt": "Minecraft Adder with Display",
+    "url": "https://github.com/jingye-xu/Minecraft-Adder-with-Display",
+    "article": "assets/contents/projects/articles/github-minecraft-adder.html"
   }
 ]

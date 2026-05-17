@@ -1,17 +1,102 @@
 'use strict';
 
+const loadProfileList = async function (path, listId, options = {}) {
+  const list = document.getElementById(listId);
+  if (!list) {
+    return;
+  }
+
+  try {
+    const response = await fetch(path);
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+
+    const text = await response.text();
+    const lines = text.split("\n").map((line) => line.trim()).filter(Boolean);
+
+    list.innerHTML = "";
+    lines.forEach((line) => {
+      const li = document.createElement("li");
+
+      if (options.splitLabel && line.includes(":")) {
+        const [label, ...rest] = line.split(":");
+        const strong = document.createElement("strong");
+        strong.textContent = `${label}: `;
+        li.appendChild(strong);
+        li.append(rest.join(":").trim());
+      } else {
+        li.textContent = line;
+      }
+
+      list.appendChild(li);
+    });
+  } catch (error) {
+    console.error(`Error loading ${listId}:`, error);
+    list.innerHTML = "";
+  }
+};
+
+loadProfileList("assets/contents/skills.txt", "skills-list", { splitLabel: true });
+loadProfileList("assets/contents/publications.txt", "publications-list");
+loadProfileList("assets/contents/awards.txt", "awards-list");
+
+const loadTimeline = async function (path, timelineId, labels) {
+  const timeline = document.getElementById(timelineId);
+  if (!timeline) {
+    return;
+  }
+
+  try {
+    const response = await fetch(path);
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+
+    const text = await response.text();
+    const entries = text.split("\n\n").map((entry) => entry.trim()).filter(Boolean);
+
+    timeline.innerHTML = "";
+    entries.forEach((entry) => {
+      const lines = entry.split("\n").map((line) => line.trim()).filter(Boolean);
+      if (lines.length < 4) {
+        return;
+      }
+
+      const [title, subtitle, time, ...descArr] = lines;
+      const desc = descArr.map((line) => `&nbsp;&nbsp;${line}`).join("<br>");
+      const li = document.createElement("li");
+      li.className = "timeline-item";
+      li.innerHTML = `
+        <h4 class="h4 timeline-item-title">${title}</h4>
+        <span class="timeline-major">${subtitle}</span>
+        <span class="timeline-time">${time}</span>
+        <p class="timeline-text">${desc}</p>
+      `;
+      timeline.appendChild(li);
+    });
+  } catch (error) {
+    console.error(`Error loading ${labels}:`, error);
+    timeline.innerHTML = "";
+  }
+};
+
+loadTimeline("assets/contents/education.txt", "education-timeline", "education timeline");
+loadTimeline("assets/contents/experience.txt", "experience-timeline", "experience timeline");
+
 
 const createProjectItemHtml = function (project) {
   const title = project.title || "Untitled";
-  const category = (project.category || "").toLowerCase();
-  const categoryLabel = project.categoryLabel || project.category || "";
+  const tags = Array.isArray(project.tags) && project.tags.length ? project.tags : [project.category || "Project"];
+  const normalizedTags = tags.map((tag) => tag.toLowerCase());
+  const categoryLabel = tags.join(" / ");
   const image = project.image || "";
   const alt = project.alt || title.toLowerCase();
   const url = project.url || "#";
   const article = project.article || "";
 
   return `
-    <li class="project-item active" data-filter-item data-category="${category}">
+    <li class="project-item active" data-filter-item data-tags="${normalizedTags.join("|")}">
       <a href="${url}" data-project-link data-project-article="${article}" data-project-title="${title}">
         <figure class="project-img">
           <div class="project-item-icon-box">
@@ -24,6 +109,42 @@ const createProjectItemHtml = function (project) {
       </a>
     </li>
   `;
+};
+
+const renderPortfolioFilters = function (projects) {
+  const filterList = document.getElementById("filter-list");
+  const selectList = document.getElementById("select-list");
+  const selectValue = document.querySelector("[data-selecct-value]");
+
+  if (!filterList || !selectList) {
+    return;
+  }
+
+  const tags = ["All"];
+  projects.forEach((project) => {
+    const projectTags = Array.isArray(project.tags) ? project.tags : [project.category].filter(Boolean);
+    projectTags.forEach((tag) => {
+      if (tag && !tags.includes(tag)) {
+        tags.push(tag);
+      }
+    });
+  });
+
+  filterList.innerHTML = tags.map((tag, index) => `
+    <li class="filter-item">
+      <button class="${index === 0 ? "active" : ""}" data-filter-btn>${tag}</button>
+    </li>
+  `).join("");
+
+  selectList.innerHTML = tags.map((tag) => `
+    <li class="select-item">
+      <button data-select-item>${tag}</button>
+    </li>
+  `).join("");
+
+  if (selectValue) {
+    selectValue.innerText = "Select category";
+  }
 };
 
 const loadPortfolioProjects = async function () {
@@ -43,6 +164,7 @@ const loadPortfolioProjects = async function () {
       throw new Error("Invalid projects data format");
     }
 
+    renderPortfolioFilters(projects);
     projectList.innerHTML = projects.map(createProjectItemHtml).join("");
   } catch (error) {
     console.error("Error loading projects:", error);
@@ -208,28 +330,12 @@ if (modalCloseBtn && overlay && modalContainer && modalImg && modalTitle && moda
 
 // custom select variables
 const select = document.querySelector("[data-select]");
-const selectItems = document.querySelectorAll("[data-select-item]");
 const selectValue = document.querySelector("[data-selecct-value]");
-const filterBtn = document.querySelectorAll("[data-filter-btn]");
+const filterList = document.getElementById("filter-list");
+const selectList = document.getElementById("select-list");
 
 if (select) {
   select.addEventListener("click", function () { elementToggleFunc(this); });
-}
-
-// add event in all select items
-for (let i = 0; i < selectItems.length; i++) {
-  selectItems[i].addEventListener("click", function () {
-
-    let selectedValue = this.innerText.toLowerCase();
-    if (selectValue) {
-      selectValue.innerText = this.innerText;
-    }
-    if (select) {
-      elementToggleFunc(select);
-    }
-    filterFunc(selectedValue);
-
-  });
 }
 
 const filterFunc = function (selectedValue) {
@@ -239,7 +345,7 @@ const filterFunc = function (selectedValue) {
 
     if (selectedValue === "all") {
       filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
+    } else if ((filterItems[i].dataset.tags || "").split("|").includes(selectedValue)) {
       filterItems[i].classList.add("active");
     } else {
       filterItems[i].classList.remove("active");
@@ -249,29 +355,43 @@ const filterFunc = function (selectedValue) {
 
 }
 
-// add event in all filter button items for large screen
-if (filterBtn.length > 0) {
-  let lastClickedBtn = filterBtn[0];
+if (selectList) {
+  selectList.addEventListener("click", function (event) {
+    const selectedItem = event.target.closest("[data-select-item]");
+    if (!selectedItem) {
+      return;
+    }
 
-  for (let i = 0; i < filterBtn.length; i++) {
+    const selectedValue = selectedItem.innerText.toLowerCase();
+    if (selectValue) {
+      selectValue.innerText = selectedItem.innerText;
+    }
+    if (select) {
+      elementToggleFunc(select);
+    }
+    filterFunc(selectedValue);
+  });
+}
 
-    filterBtn[i].addEventListener("click", function () {
+if (filterList) {
+  filterList.addEventListener("click", function (event) {
+    const filterBtn = event.target.closest("[data-filter-btn]");
+    if (!filterBtn) {
+      return;
+    }
 
-      let selectedValue = this.innerText.toLowerCase();
-      if (selectValue) {
-        selectValue.innerText = this.innerText;
-      }
-      filterFunc(selectedValue);
+    const selectedValue = filterBtn.innerText.toLowerCase();
+    if (selectValue) {
+      selectValue.innerText = filterBtn.innerText;
+    }
+    filterFunc(selectedValue);
 
-      if (lastClickedBtn) {
-        lastClickedBtn.classList.remove("active");
-      }
-      this.classList.add("active");
-      lastClickedBtn = this;
-
-    });
-
-  }
+    const activeBtn = filterList.querySelector(".active");
+    if (activeBtn) {
+      activeBtn.classList.remove("active");
+    }
+    filterBtn.classList.add("active");
+  });
 }
 
 

@@ -1,16 +1,20 @@
 <article>
   <h2>Home Activity Monitoring</h2>
   <p>
-    This article describes the project goals, sensing pipeline, and model design for home activity monitoring.
+    A privacy-preserving in-home activity monitoring system for patients and older adults, designed to support long-term health tracking without cameras or wearables. The system uses non-identifiable environmental sensors and WiFi-based sensing to recognize activity patterns in realistic home environments.
   </p>
   <h3>Highlights</h3>
   <ul>
-    <li>Multi-sensor fusion for robust indoor activity recognition.</li>
-    <li>Temporal modeling for long-duration behavior understanding.</li>
-    <li>Evaluation across realistic home environments.</li>
+    <li>Designed SAFE, a Sensor-Aware Fusion Engine for reliability-aware multi-modal fusion.</li>
+    <li>Sustained 97%+ accuracy under single-sensor faults and 96%+ accuracy under dual-sensor faults.</li>
+    <li>Outperformed baseline systems whose accuracy dropped to 90% under single-sensor faults and 83% under dual-sensor faults.</li>
+    <li>Characterized real-world data-distribution shifts in WiFi-based activity monitoring for home healthcare.</li>
   </ul>
-  <h3>Details</h3>
+  <h3>Research Contributions</h3>
   <p>
-    Replace this section with your full write-up, figures, and references.
+    This work focuses on robustness in deployed sensing systems, where sensors can fail, drift, or become unreliable over time. SAFE dynamically evaluates sensor reliability and fuses multiple sensing channels so the model can continue producing accurate activity predictions under degraded sensing conditions.
+  </p>
+  <p>
+    Related publications include SAFE: Sensor-Aware Fusion Engine for Fault-resilient In-home Health Activity Monitoring (CHASE 2026, accepted), Touchless Restroom Monitoring: A Privacy-Preserving System for Patient Care (HumanSys 2025), and Data Distribution Dynamics in Real-world WiFi-based Patient Activity Monitoring for Home Healthcare (ICHI 2024).
   </p>
 </article>

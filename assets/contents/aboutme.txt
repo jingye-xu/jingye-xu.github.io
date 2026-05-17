@@ -1,2 +1,3 @@
-I am a PhD candidate in Computer Science specializing in machine learning, with hands-on experience building and deploying end-to-end ML systems. Skilled in large-scale model development, data processing, and real-time inference using Python, PyTorch, and TensorFlow. Led projects spanning autonomous systems, sensor-driven prediction models, and production-ready ML pipelines. Seeking to apply advanced AI expertise to develop impactful, scalable intelligent solutions across diverse application domains.
+I am a PhD candidate in Computer Science at The University of Texas at San Antonio, working at the intersection of machine learning, Internet of Things, edge computing, and connected health.
 
+I build reliable intelligent systems for real-world sensing environments, from privacy-preserving in-home activity monitoring and PPG-based HRV estimation to embedded TinyML and assistive autonomous mobility.

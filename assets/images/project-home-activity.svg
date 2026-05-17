@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" role="img" aria-labelledby="title desc">
+  <title id="title">Home activity monitoring system thumbnail</title>
+  <desc id="desc">A home floor plan with connected privacy-preserving sensors.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#202124"/>
+      <stop offset="100%" stop-color="#171719"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop offset="0%" stop-color="#ffd36a"/>
+      <stop offset="100%" stop-color="#69d6c5"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="600" fill="url(#bg)"/>
+  <rect x="150" y="90" width="600" height="420" rx="18" fill="#242528" stroke="#4a4a4d" stroke-width="5"/>
+  <path d="M150 250h600M360 90v420M555 250v260" stroke="#4a4a4d" stroke-width="5"/>
+  <path d="M240 190h115M225 345h115M610 170h95M610 365h95" stroke="#d6d6d6" stroke-width="8" stroke-linecap="round" opacity=".7"/>
+  <g fill="none" stroke="url(#accent)" stroke-width="5">
+    <path d="M270 190C340 265 480 280 635 170"/>
+    <path d="M270 345C360 390 500 410 660 365"/>
+  </g>
+  <g fill="#ffd36a">
+    <circle cx="270" cy="190" r="16"/>
+    <circle cx="635" cy="170" r="16"/>
+    <circle cx="270" cy="345" r="16"/>
+    <circle cx="660" cy="365" r="16"/>
+  </g>
+  <g fill="#69d6c5">
+    <circle cx="450" cy="275" r="22"/>
+    <path d="M450 306c-44 0-72 24-78 64h156c-6-40-34-64-78-64z"/>
+  </g>
+</svg>

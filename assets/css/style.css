@@ -321,7 +321,7 @@ main {
   transition: var(--transition-2);
 }
 
-.sidebar.active { max-height: 405px; }
+.sidebar.active { max-height: 620px; }
 
 .sidebar-info {
   position: relative;
@@ -506,6 +506,27 @@ main {
 
 .about-text p { margin-bottom: 15px; }
 
+.profile-list {
+  display: grid;
+  gap: 12px;
+  margin-left: 45px;
+}
+
+.profile-list li {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+  list-style: disc;
+}
+
+.profile-list strong {
+  color: var(--white-2);
+  font-weight: var(--fw-500);
+}
+
+.profile-list.compact { gap: 10px; }
+
 
 
 /**
@@ -544,6 +565,8 @@ main {
 
 .service-icon-box img { margin: auto; }
 
+.service-icon-box .icon-box { margin: auto; }
+
 .service-content-box { text-align: center; }
 
 .service-item-title { margin-bottom: 7px; }
@@ -551,7 +574,7 @@ main {
 .service-item-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
-  font-weight: var(--fw-3);
+  font-weight: var(--fw-300);
   line-height: 1.6;
 }
 
@@ -733,6 +756,10 @@ main {
   margin: 12px 0 8px;
 }
 
+[data-project-article] article > h2:first-child {
+  display: none;
+}
+
 [data-project-article] p,
 [data-project-article] li {
   color: var(--light-gray);
@@ -746,8 +773,21 @@ main {
   margin: 8px 0 12px 18px;
 }
 
+[data-project-article] a {
+  color: var(--orange-yellow-crayola);
+  display: inline;
+}
+
 [data-project-article] article {
   display: block;
+  width: auto;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 
@@ -1053,6 +1093,7 @@ main {
   color: var(--light-gray-70);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
+  line-height: 1.4;
 }
 
 
@@ -1362,7 +1403,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     margin-bottom: 30px;
   }
 
-  .sidebar.active { max-height: 584px; }
+  .sidebar.active { max-height: 760px; }
 
   .sidebar-info { gap: 25px; }
 
@@ -1519,6 +1560,8 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-list { margin-left: 65px; }
 
+  .profile-list { margin-left: 65px; }
+
   .timeline-item:not(:last-child)::before { left: -40px; }
 
   .timeline-item::after {
@@ -1634,9 +1677,10 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .filter-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
-    gap: 25px;
+    gap: 14px 25px;
     padding-left: 5px;
     margin-bottom: 30px;
   }

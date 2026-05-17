@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" role="img" aria-labelledby="title desc">
+  <title id="title">Vital sign monitoring thumbnail</title>
+  <desc id="desc">A PPG waveform and compact embedded model blocks.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#18191c"/>
+      <stop offset="100%" stop-color="#24262b"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="0" x2="1">
+      <stop offset="0%" stop-color="#ffcf67"/>
+      <stop offset="55%" stop-color="#f17f8a"/>
+      <stop offset="100%" stop-color="#74d0ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="600" fill="url(#bg)"/>
+  <rect x="120" y="115" width="660" height="370" rx="22" fill="#1f2024" stroke="#4a4a4d" stroke-width="4"/>
+  <path d="M155 315h90l28-84 54 170 55-245 59 190 36-76h70l30-52 42 118h128" fill="none" stroke="url(#wave)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#30333a" stroke="#565960" stroke-width="3">
+    <rect x="190" y="165" width="120" height="54" rx="10"/>
+    <rect x="390" y="165" width="120" height="54" rx="10"/>
+    <rect x="590" y="165" width="120" height="54" rx="10"/>
+  </g>
+  <g fill="#d9d9d9" opacity=".85" font-family="Arial, sans-serif" font-size="24" font-weight="700">
+    <text x="219" y="201">PPG</text>
+    <text x="423" y="201">HRV</text>
+    <text x="620" y="201">MCU</text>
+  </g>
+  <circle cx="702" cy="403" r="34" fill="#ffcf67"/>
+  <circle cx="702" cy="403" r="18" fill="#1f2024"/>
+</svg>
